@@ -1,6 +1,6 @@
 import pygame as p
-screenX = 1500
-screenY = 900
+screenX = 2000
+screenY = 1200
 class File:
     def __init__(self, media, name, type, grade=0, reviewed=False):
         if media.get_width() >= media.get_height():
