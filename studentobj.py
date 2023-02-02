@@ -1,6 +1,7 @@
 import pygame as p
-screenX = 2000
-screenY = 1200
+import random
+screenX = 1500
+screenY = 900
 class File:
     def __init__(self, media, name, type, grade=0, reviewed=False):
         if media.get_width() >= media.get_height():
@@ -9,7 +10,7 @@ class File:
             self.media = p.transform.scale(media, (int(media.get_width()*((8*screenY/9)/media.get_height())),int(8*screenY/9)))
         self.name = name
         self.type = type
-        self.grade = grade
+        self.grade = random.randint(0,10)
         self.reviewed = reviewed
     
     def changegrade(self,grade):
